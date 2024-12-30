@@ -5,10 +5,20 @@ import { Image } from "astro:assets"
 import shop from "../assets/img/shop.png"
 ---
 
-<header class="bg-gray-200 flex justify-between">
-    <Image src={tumbo} alt="tumbo" width="80" />
-    <nav>
-        <Button texto="Inicie sesion" />
-        <Image src={shop} alt="shop" width="20" />
-    </nav>
+<header class="bg-gray-200 flex flex-col justify-between py-2">
+    <div class="flex mx-2 justify-between items-center">
+        <Image src={tumbo} alt="tumbo" width="100" />
+        <nav class="flex">
+            <Button texto="Inicie sesion" class="bg-green-400" />
+            <Image src={shop} alt="shop" width="30" />
+        </nav>
+    </div>
+
+    <div class="container flex items-center mt-2 mx-2">
+        <select class="mr-3 border border-black rounded-3xl p-2 px-3">
+            <option value="">Categorias</option>
+        </select>
+
+        <input type="search" placeholder="Buscar en Tumbo" class="border border-black rounded-3xl p-2 px-6">
+    </div>
 </header>
