@@ -1,0 +1,14 @@
+---
+import Button from "../components/Button.astro"
+import tumbo from "../assets/img/tumbo.png"
+import { Image } from "astro:assets"
+import shop from "../assets/img/shop.png"
+---
+
+<header class="bg-gray-200 flex justify-between">
+    <Image src={tumbo} alt="tumbo" width="80" />
+    <nav>
+        <Button texto="Inicie sesion" class=""/>
+    </nav>
+    <Image src={shop} />
+</header>
