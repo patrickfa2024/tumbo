@@ -1,0 +1,8 @@
+*{
+    font-family: 'Quicksand';
+}
+@font-face {
+    font-family: 'Quicksand';
+    src: url('../assets/fonts/Quicksand-SemiBold.ttf');
+}
+

@@ -2,23 +2,53 @@
 import Button from "../components/Button.astro"
 import tumbo from "../assets/img/tumbo.png"
 import { Image } from "astro:assets"
-import shop from "../assets/img/shop.png"
+import shop from "../assets/shop.svg"
+import search from "../assets/icons/search.svg"
 ---
 
-<header class="bg-gray-200 flex flex-col justify-between py-2">
-    <div class="flex mx-2 justify-between items-center">
-        <Image src={tumbo} alt="tumbo" width="100" />
+<header class="bg-gray-100 flex flex-col justify-between py-2">
+    <div class="flex mx-3 justify-between items-center">
+
+        <Image src={tumbo} alt="tumbo" width="120" />
         <nav class="flex">
-            <Button texto="Inicie sesion" class="bg-green-400" />
-            <Image src={shop} alt="shop" width="30" />
+            <Button name="Inicie sesion" class="border-2 border-green-300 rounded-lg p-1 mr-3 hover:bg-green-400 transition duration-300 ease-in-out text-base" />
+            <Image src={shop} alt="shop" width="32" />
         </nav>
+
     </div>
 
-    <div class="container flex items-center mt-2 mx-2">
-        <select class="mr-3 border border-black rounded-3xl p-2 px-3">
+    <div class="container flex items-center mt-4 mx-2">
+        <select class="mr-4 border border-black rounded-3xl p-2 px-3">
             <option value="">Categorias</option>
+            <option value="">Despensa</option>
+            <option value="">Carnes</option>
+            <option value="">Frutas</option>
+            <option value="">Lacteos</option>
+            <option value="">Desayunos</option>
+            <option value="">Fiambres</option>
+            <option value="">Bebidas</option>
+            <option value="">Vinos</option>
+            <option value="">Congelados</option>
+            <option value="">Pescados</option>
         </select>
 
-        <input type="search" placeholder="Buscar en Tumbo" class="border border-black rounded-3xl p-2 px-6">
+        <div class="div1 flex">
+            <input type="search" placeholder="Buscar en Tumbo" class="border border-black rounded-3xl p-2 px-6">
+            <Image src={search} alt="search" class="div2 bg-primary" />
+        </div>
+
     </div>
 </header>
+
+<style>
+    .div1{
+        position: relative;
+    }
+
+    .div2{
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        color:white;
+    }
+</style>
