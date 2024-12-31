@@ -17,3 +17,41 @@ import HeaderIndex from "../components/Header.astro"
     <Categories />
 </HeaderIndex>
 
+    <div class="container flex items-center mt-4 mx-2">
+        <select class="mr-4 border border-black rounded-3xl p-2 px-3">
+            <option value="">Categorias</option>
+            <option value="">Despensa</option>
+            <option value="">Carnes</option>
+            <option value="">Frutas</option>
+            <option value="">Lacteos</option>
+            <option value="">Desayunos</option>
+            <option value="">Fiambres</option>
+            <option value="">Bebidas</option>
+            <option value="">Vinos</option>
+            <option value="">Congelados</option>
+            <option value="">Pescados</option>
+        </select>
+
+        <div class="div1 flex">
+            <input type="search" placeholder="Buscar en Tumbo" class="border border-black rounded-3xl p-2 px-6">
+
+            <button class="div2 bg-primary rounded-full h-10 w-10 flex justify-center items-center">
+                <Icon name="search" class="text-2xl"/>
+            </button>
+        </div>
+    </div>
+</header>
+
+<style>
+    .div1{
+        position: relative;
+    }
+
+    .div2{
+        position: absolute;
+        right: 1px;
+        bottom: px;
+        top: 1px;
+        color: white;
+    }
+</style>
