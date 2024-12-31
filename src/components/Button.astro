@@ -1,4 +1,6 @@
 ---
-const { texto } = Astro.props;
+const { class:className, url, name,} = Astro.props;
 ---
-<button> {texto} </button>
+
+<a  class={className} href={url}>{name}</a>
+
