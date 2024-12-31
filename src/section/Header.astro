@@ -3,19 +3,19 @@ import Button from "../components/Button.astro"
 import Tumbo from "../assets/img/tumbo.png"
 import { Image } from "astro:assets"
 import shop from "../assets/shop.svg"
-import { Icon } from 'astro-icon/components';
+import Categories from "../components/Categories.astro"
+import HeaderIndex from "../components/Header.astro"
 ---
-
-<header class="bg-gray-100 flex flex-col justify-between py-2">
+<HeaderIndex>
     <div class="flex mx-3 justify-between items-center">
-
         <Image src={Tumbo} alt="tumbo" width="120" />
         <nav class="flex">
-            <Button name="Inicie sesion" class="border-2 border-indigo-200 rounded-xl transition ease-in-out delay-300 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 p-1 py-1 text-lg mr-2" />
+            <Button name="Inicie sesion" url="/login" class="border-2 border-indigo-200 rounded-xl transition ease-in-out delay-300 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 p-1 py-1 text-lg mr-2" />
             <Image src={shop} alt="shop" width="32" /> 
         </nav>
-
     </div>
+    <Categories />
+</HeaderIndex>
 
     <div class="container flex items-center mt-4 mx-2">
         <select class="mr-4 border border-black rounded-3xl p-2 px-3">
