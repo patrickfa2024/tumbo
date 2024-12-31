@@ -1,16 +1,15 @@
 ---
 import Button from "../components/Button.astro"
-import tumbo from "../../assets/img/tumbo.png"
+import Tumbo from "../assets/img/tumbo.png"
 import { Image } from "astro:assets"
 import shop from "../assets/shop.svg"
 import { Icon } from 'astro-icon/components';
-import flecha from "../assets/flecha.svg"
 ---
 
 <header class="bg-gray-100 flex flex-col justify-between py-2">
     <div class="flex mx-3 justify-between items-center">
 
-        <Image src={tumbo} alt="tumbo" width="120" />
+        <Image src={Tumbo} alt="tumbo" width="120" />
         <nav class="flex">
             <Button name="Inicie sesion" class="border-2 border-indigo-200 rounded-xl transition ease-in-out delay-300 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 p-1 py-1 text-lg mr-2" />
             <Image src={shop} alt="shop" width="32" /> 
