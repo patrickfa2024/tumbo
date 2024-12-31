@@ -1,0 +1,25 @@
+---
+import Footer from "../section/Footer.astro";
+import Layout from '../layouts/Layout.astro';
+import LoginForm from "../components/LoginForm.astro";
+import Header from "../components/Header.astro";
+import Tumbo from "../assets/img/tumbo.png"
+import { Image } from "astro:assets"
+import { Icon } from "astro-icon/components";
+---
+<Layout>
+    <Header>
+        <div class="flex mx-3 justify-between items-center">
+            <Image src={Tumbo} alt="tumbo" width="120" />
+            <a href="/"><Icon name={"arrowleft"}/></a>
+        </div>
+    </Header>
+    <LoginForm/>
+    <Footer/>
+</Layout>
+<style>
+    [data-icon]{
+        margin-right: 10px;
+        font-size: 1.5rem;
+    }
+</style>
