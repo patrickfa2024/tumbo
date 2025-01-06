@@ -1,9 +1,13 @@
 ---
+import Image from 'astro/components/Image.astro';
 import Card from '../components/Card.astro';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import ofertas from "../assets/img/ofertas.png"
 ---
-<main class="flex flex-col ">
+<Image src={ofertas} alt="ofertas"  class="h-14" />
+
+<main class="flex flex-col">
     <div class="swiper">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
@@ -71,8 +75,8 @@ import 'swiper/css/pagination';
   }
 
   :global(.swiper-pagination-bullet) {
-    background: #800202;
-    width: 10px;
-    height: 10px;
+    background: #0d8002;
+    width: 13px;
+    height: 13px;
   }
 </style>
