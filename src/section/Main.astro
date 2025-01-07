@@ -3,9 +3,16 @@ import Image from 'astro/components/Image.astro';
 import Card from '../components/Card.astro';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import ofertas from "../assets/img/ofertas.png"
+import ofertas from '../assets/img/ofertas.png';
+import Opciones from '../components/Opciones.astro';
+import oferton from '../assets/img/oferton.png';
+import martes from  '../assets/img/martes.png';
 ---
 <Image src={ofertas} alt="ofertas"  class="h-14" />
+
+<Opciones />
+
+<Image src={oferton} alt="oferton" height="250" class="rounded-2xl px-2" />
 
 <main class="flex flex-col">
     <div class="swiper">
@@ -32,7 +39,11 @@ import ofertas from "../assets/img/ofertas.png"
         
         <div class="swiper-pagination"></div>
     </div>
+
+<Image src={martes} alt="martes" class="mt-4" />
+
 </main>
+
 
 <script>
   import Swiper from 'swiper';
