@@ -1,0 +1,84 @@
+---
+import Frutas from "./Frutas.astro";
+import Image from "astro/components/Image.astro";
+import sandia from "../assets/img/sandia.png";
+import 'swiper/css';
+import 'swiper/css/pagination';
+---
+
+<main class="flex flex-col">
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <Frutas />
+            </div>
+            <div class="swiper-slide">
+                <Frutas />
+            </div>
+            <div class="swiper-slide">
+                <Frutas />
+            </div>
+            <div class="swiper-slide">
+                <Frutas />
+            </div>
+            <div class="swiper-slide">
+                <Frutas />
+            </div>
+            <div class="swiper-slide">
+                <Frutas />
+            </div>
+        </div>
+        
+        <div class="swiper-pagination"></div>
+  
+    </div>
+  
+  </main>
+  
+  
+  <script>
+    import Swiper from 'swiper';
+    import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+  
+    const swiper = new Swiper('.swiper', {
+      modules: [Navigation, Pagination, Autoplay],
+      slidesPerView: 1,
+      spaceBetween: 10,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+        },
+        768: {
+          slidesPerView: 3,
+        },
+        1024: {
+          slidesPerView: 4,
+        }
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        dynamicBullets: true
+      }
+    });
+  </script>
+  
+  <style>
+    .swiper {
+      width: 100%;
+      padding: 20px;
+    }
+  
+    .swiper-slide {
+      height: auto;
+    }
+  
+    :global(.swiper-pagination-bullet) {
+      background: #0d8002;
+      width: 13px;
+      height: 13px;
+    }
+  </style>

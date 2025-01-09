@@ -7,6 +7,7 @@ import ofertas from '../assets/img/ofertas.png';
 import Opciones from '../components/Opciones.astro';
 import oferton from '../assets/img/oferton.png';
 import martes from  '../assets/img/martes.png';
+import Frutas1 from '../components/Frutas1.astro';
 ---
 <Image src={ofertas} alt="ofertas"  class="h-14" />
 
@@ -42,8 +43,11 @@ import martes from  '../assets/img/martes.png';
 
 <Image src={martes} alt="martes" class="mt-4" />
 
-</main>
+<main class="flex flex-col">
 
+<div class="flex flex-col">
+  <Frutas1 />
+</div>
 
 <script>
   import Swiper from 'swiper';

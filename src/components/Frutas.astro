@@ -1,14 +1,14 @@
 ---
-import Image from "astro/components/Image.astro"
-import pollito from "../assets/img/pollito.png"
-import { AstroComponentInstance } from "astro/dist/runtime/server"
-import Button from "./Button.astro"
-const {url, } = Astro.props
+import Image from 'astro/components/Image.astro';
+import sandia from '../assets/img/sandia.png';
+import Button from './Button.astro';
+import 'swiper/css';
+import 'swiper/css/pagination';
 ---
+
 <div class="">
-    <p class="text-2xl ml-6">¡lo mejor de la semanana en tumbo!</p>
-    <div class="container w-3/4 h-96 bg-gray-200 flex flex-col items-center justify-center px-4 py-4 rounded-xl mb-7 ml-10">
-        <Image src={pollito} alt="pollito" width="150" class="mx-auto " />
+    <div class="container w-4/5 h-96 bg-gray-200 flex flex-col items-center justify-center px-4 py-4 rounded-xl mb-7 ml-8">
+        <Image src={sandia} alt="sandia" width="170" class="mx-auto " />
         <p class="text-lg text-center ">pollo que tiene alas y vuela</p>
         <div class="flex flex-col items-center">
             <div class="flex justify-center ">
@@ -35,3 +35,5 @@ const {url, } = Astro.props
             <Button name="Add to cart" url="#" class="border-2 border-indigo-300 rounded-xl transition ease-in-out delay-300 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 p-2 py-1 text-lg mt-2 px-6" />
         </div>
     </div>
+
+   
